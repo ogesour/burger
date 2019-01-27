@@ -31,7 +31,12 @@ router.put("/:id", function(req, res) {
 	burger.updateOne(req.params.id, function() {
 		res.redirect("/");
 	});
+	
+
 })
+// issues with PUT request. Database updates however page does not render (404)
+
+
 
 // Export
 module.exports = router;

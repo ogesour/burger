@@ -15,11 +15,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// Set up rendering engine, Handlebars
+// Set up Handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Static files and routes (middleware)
+// Static files and routes 
 app.use(express.static(__dirname + "/public"));
 app.use("/", router);
 
